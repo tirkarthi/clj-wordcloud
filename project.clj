@@ -1,4 +1,4 @@
-(defproject xtreak/clj-wordcloud "0.0.1"
+(defproject xtreak/clj-wordcloud "0.0.2-SNAPSHOT"
   :description "A simple clojure wrapper around kumo for wordcloud generation"
   :url "http://github.com/tirkarthi/clj-wordcloud"
   :license {:name "MIT public license"
