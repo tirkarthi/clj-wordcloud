@@ -5,6 +5,5 @@ notifications:
   email: false
 
 jdk:
-  - openjdk7
   - openjdk8
   - oraclejdk9
