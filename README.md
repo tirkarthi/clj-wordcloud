@@ -1,6 +1,10 @@
-# clj-wordcloud [![Build Status](https://travis-ci.org/tirkarthi/clj-wordcloud.svg?branch=master)](https://travis-ci.org/tirkarthi/clj-wordcloud)
+# clj-wordcloud [![Clojars Project](https://img.shields.io/clojars/v/xtreak/clj-wordcloud.svg)](https://clojars.org/xtreak/clj-wordcloud) [![Build Status](https://travis-ci.org/tirkarthi/clj-wordcloud.svg?branch=master)](https://travis-ci.org/tirkarthi/clj-wordcloud)
 
 A simple clojure wrapper around kumo to generate wordcloud
+
+## Leiningen
+
+`[xtreak/clj-wordcloud "0.0.1"]`
 
 ## Example
 
@@ -10,7 +14,7 @@ Given a map of element and the frequency the following image is generated. More 
 
 ```clojure
 (ns examples
-  (:require '[clj-wordcloud.core :refer :all]))
+  (:require [clj-wordcloud.core :refer :all]))
 
 (let [frequency-map (zipmap (random-words 100) (shuffle (range 300)))
       word-cloud (word-cloud frequency-map
@@ -34,7 +38,7 @@ Given a map of element and the frequency the following image is generated. More 
 
 ```clojure
 (ns examples
-  (:require '[clj-wordcloud.core :refer :all]))
+  (:require [clj-wordcloud.core :refer :all]))
 
 (let [frequency-map (zipmap (range 100 150) (shuffle (range 300)))
       word-cloud    (word-cloud frequency-map

@@ -1,5 +1,5 @@
 (ns examples
-  (:require '[clj-wordcloud.core :refer :all]))
+  (:require [clj-wordcloud.core :refer :all]))
 
 
 (defn random-words
