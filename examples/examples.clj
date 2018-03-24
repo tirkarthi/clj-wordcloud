@@ -28,7 +28,7 @@
   (write-to-file word-cloud "example_circle.png"))
 
 
-(let [frequency-map (zipmap (range 100 150) (shuffle (range 300)))
+(let [frequency-map (zipmap (map str (range 100 150)) (shuffle (range 300)))
       word-cloud    (word-cloud frequency-map
                                 {:dimension  {:width  600
                                               :height 600}

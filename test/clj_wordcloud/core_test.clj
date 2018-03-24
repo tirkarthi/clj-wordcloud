@@ -12,7 +12,7 @@
 
 (deftest image-dimensions-test
   (testing "Test width and height of the generated image"
-    (let [freq-map   (zipmap (range 100 130) (range 300))
+    (let [freq-map   (zipmap (map str (range 100 130)) (range 300))
           word-cloud (word-cloud freq-map
                                  {:dimension  {:width  600
                                                :height 600}
