@@ -16,19 +16,25 @@ Given a map of element and the frequency the following image is generated. More 
 (ns examples
   (:require [clj-wordcloud.core :refer :all]))
 
-(let [frequency-map (zipmap (random-words 100) (shuffle (range 300)))
-      word-cloud (word-cloud frequency-map
-                             {:dimension  {:width  600
-                                           :height 600}
-                              :background {:type :circle
-                                           :size 300
-                                           :color "0x000000"}
-                              :font       {:type       "Calibre"
-                                           :weight     :plain
-                                           :scale-type :linear
-                                           :x-scale    20
-                                           :y-scale    20
-                                           :padding    5}})]
+(def programming-languages ["Clojure" "Haskell" "Go" "Rust" "Scala" "Python" "Perl"
+                            "Ruby" "Smalltalk" "PHP" "Java" "JavaScript"
+                            "C" "C++" "Lisp" "Scheme" "Typescript" "D" "R" "Brainfuck" "Elixir"
+                            "Erlang" "C#" "BASIC" "Logo" "Alice" "Dart" "Purescript" "Prolog"
+                            "Ada" "F#" "Julia" "Kotlin" "Swift" "Delphi"])
+
+(let [frequency-map (zipmap programming-languages (shuffle (range 300)))
+      word-cloud    (word-cloud frequency-map
+                                {:dimension  {:width  600
+                                              :height 600}
+                                 :background {:type  :circle
+                                              :size  300
+                                              :color "0x000000"}
+                                 :font       {:type       "Calibre"
+                                              :weight     :plain
+                                              :scale-type :linear
+                                              :x-scale    20
+                                              :y-scale    20
+                                              :padding    5}})]
   (write-to-file word-cloud "example_circle.png"))
 ```
 
